@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.bnSuma -> {
                 Toast.makeText(this,"Hice click en Suma", Toast.LENGTH_LONG).show()
             }
-            
+
             R.id.bnResta -> {
                 Snackbar.make(p0, "Hice click en Resta", Snackbar.LENGTH_LONG).show()
             }
