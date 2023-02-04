@@ -21,21 +21,63 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        inicializarVistas()
+        asignarEventos()
+    }
+
+    private fun inicializarVistas(){
         bnSuma = findViewById(R.id.bnSuma)
         bnResta = findViewById(R.id.bnResta)
+        etNumeroPrimero = findViewById(R.id.etNumeroPrimero)
+        etNumeroSegundo = findViewById(R.id.etNumeroSegundo)
+    }
+
+    private fun asignarEventos(){
         bnSuma?.setOnClickListener(this)
         bnResta?.setOnClickListener(this)
     }
 
-    override fun onClick(p0: View?) {
+
+    override fun onClick(miVista: View?) {
+        val num1 = etNumeroPrimero?.text.toString().toFloatOrNull()
+        val num2 = etNumeroSegundo?.text.toString().toFloatOrNull()
+        if (num1 == null){
+            return
+        }
+        if (num2 == null){
+            return
+        }
+
+        val aritmetica = Aritmetica()
+
         //Aqui entrara los click de las vistas
-        when(p0?.id){
+        when(miVista?.id){
             R.id.bnSuma -> {
-                Toast.makeText(this,"Hice click en Suma", Toast.LENGTH_LONG).show()
+                val suma = aritmetica.suma(num1,num2)
+                val mensaje = Mensajes("La sumatoria es $suma",this)
+                mensaje.mostarToast()
+
+
+                //if (num1 != null && num2 != null){
+                    //val suma = num1 + num2
+                    //Toast.makeText(this,"La sumatoria es $suma", Toast.LENGTH_LONG).show()
+                //}else{
+                    //Toast.makeText(this,"No agregaste nada", Toast.LENGTH_LONG).show()
+                //}
             }
 
             R.id.bnResta -> {
-                Snackbar.make(p0, "Hice click en Resta", Snackbar.LENGTH_LONG).show()
+                val resta = aritmetica.resta(num1,num2)
+                val mensaje = Mensajes("El resultado es $resta",this)
+                mensaje.mostrarSnackbar(miVista)
+
+
+                //if (num1 != null && num2 != null){
+                    //val resta = num1 - num2
+                    //Snackbar.make(miVista, "El resultado es $resta", Snackbar.LENGTH_LONG).show()
+                //}else{
+                    //Snackbar.make(miVista,"No agregaste nada", Snackbar.LENGTH_LONG).show()
+                //}
             }
         }
     }
