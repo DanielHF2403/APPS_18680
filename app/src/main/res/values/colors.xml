@@ -10,4 +10,6 @@
     <color name="califtxt">#7209b7</color>
     <color name="materiatxt">#b5179e</color>
     <color name="bground">#B7C0EE</color>
+    <color name="Aprobado">#3A7D44</color>
+    <color name="Reprobado">#9E0031</color>
 </resources>

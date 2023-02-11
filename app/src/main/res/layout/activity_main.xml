@@ -15,6 +15,7 @@
         android:text="@string/materia"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="@color/materiatxt"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="120dp"
         android:text="@string/calif"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textColor="@color/califtxt"
@@ -36,10 +37,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="170dp"
+        android:ems="2"
+        android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:inputType="number" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bnenviar"

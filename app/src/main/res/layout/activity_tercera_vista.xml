@@ -4,23 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Segunda_vista"
-    android:background="@color/bground" >
+    tools:context=".Tercera_vista"
+    android:background="@color/bground">
 
     <TextView
-        android:id="@+id/tvAprobado"
+        android:id="@+id/tvReprobado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/aprobado"
+        android:text="@string/reprobado"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:textColor="@color/Aprobado" />
+        android:textColor="@color/Reprobado"/>
 
     <Button
-        android:id="@+id/bnRegresar"
+        android:id="@+id/bnRegresar1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
@@ -28,4 +28,5 @@
         android:text="@string/regresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,7 @@
     <string name="app_name">Calificaciones y Botones</string>
     <string name="materia">Materia de Programacion</string>
     <string name="calif">Ingrese la califición:</string>
+    <string name="regresar">Regresar</string>
+    <string name="aprobado">Aprobado</string>
+    <string name="reprobado">Reprobado</string>
 </resources>
